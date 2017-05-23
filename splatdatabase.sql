@@ -1,0 +1,151 @@
+CREATE DATABASE splatbase;
+CREATE TABLE member(
+  id serial primary key,
+  username varchar,
+  nnid varchar,
+  avatar varchar,
+  ranklevel varchar,
+  freeAgent boolean,
+  currTeam varchar,
+  captain boolean,
+  aboutme varchar,
+  views numeric,
+  tagcolor varchar,
+  lft boolean,
+  endorse boolean
+);
+
+-- MERGER BETWEEN member AND teams
+CREATE TABLE membership(
+  id serial primary key,
+  member varchar REFERENCES member(id),
+  team varchar REFERENCES team(id),
+);
+
+CREATE TABLE teams(
+  id serial primary key,
+  teamname varchar,
+  avatar varchar,
+  captain varchar,
+  division varchar,
+  birthday varchar,
+  aboutme varchar,
+  views numeric,
+  lfm boolean,
+  endorse boolean
+);
+
+CREATE TABLE weapons(
+  id serial primary key,
+  name varchar,
+  imagesmall varchar,
+  imagelarge varchar
+);
+
+-- MERGER BETWEEN member AND weapons
+CREATE TABLE memberhasweapon(
+  id serial primary key,
+  member varchar REFERENCES member(id),
+  weapon varchar REFERENCES weapons(id)
+);
+
+-- MERGER BETWEEN member AND member
+CREATE TABLE recommendations(
+  id serial PRIMARY KEY,
+  giver integer REFERENCES member(id),
+  reciver integer REFERENCES member(id),
+  rtext varchar
+);
+
+-- added weapons
+INSERT INTO weapons values
+  (default, '','30px-Weapont_Main_.52_Gal_Deco.png',''),
+  (default, '','30px-Weapont_Main_.52_Gal.png',''),
+  (default, '','30px-Weapont_Main_.96_Gal_Deco.png',''),
+  (default, '','30px-Weapont_Main_.96_Gal.png',''),
+  (default, '','30px-Weapont_Main_Aerospray_MG',''),
+  (default, '','30px-Weapont_Main_Aerospray_PG.png',''),
+  (default, '','30px-Weapont_Main_Aerospray_RG.png',''),
+  (default, '','30px-Weapont_Main_Bamboozler_14_Mk_I.png',''),
+  (default, '','30px-Weapont_Main_Bamboozler_14_Mk_II.png',''),
+  (default, '','30px-Weapont_Main_Bamboozler_14_Mk_III.png',''),
+  (default, '','30px-Weapont_Main_Bento_Splat_Charger.png',''),
+  (default, '','30px-Weapont_Main_Bento_Splatterscope.png',''),
+  (default, '','30px-Weapont_Main_Berry_Splattershot_Pro.png',''),
+  (default, '','30px-Weapont_Main_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Carbon_Roller_Deco.png',''),
+  (default, '','30px-Weapont_Main_Carbon_Roller.png',''),
+  (default, '','30px-Weapont_Main_Cherry_H-3_Nozzlenose.png',''),
+  (default, '','30px-Weapont_Main_Classic_Squiffer.png',''),
+  (default, '','30px-Weapont_Main_CoroCoro_Splat_Roller.png',''),
+  (default, '','30px-Weapont_Main_Custom_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Custom_Dual_Squelcher.png',''),
+  (default, '','30px-Weapont_Main_Custom_E-liter_3K_Scope.png',''),
+  (default, '','30px-Weapont_Main_Custom_E-liter_3K.png',''),
+  (default, '','30px-Weapont_Main_Custom_Hydra_Splatling.png',''),
+  (default, '','30px-Weapont_Main_Custom_Jet_Squelcher.png',''),
+  (default, '','30px-Weapont_Main_Custom_Range_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Custom_Splattershot_Jr..png',''),
+  (default, '','30px-Weapont_Main_Dual_Squelcher.png',''),
+  (default, '','30px-Weapont_Main_Dynamo_Roller.png',''),
+  (default, '','30px-Weapont_Main_E-liter_3K_Scope.png',''),
+  (default, '','30px-Weapont_Main_E-liter_3K.png',''),
+  (default, '','30px-Weapont_Main_Forge_Splattershot_Pro.png',''),
+  (default, '','30px-Weapont_Main_Fresh_Squiffer.png',''),
+  (default, '','30px-Weapont_Main_Gold_Dynamo_Roller.png',''),
+  (default, '','30px-Weapont_Main_Grim_Range_Blaster.png',''),
+  (default, '','30px-Weapont_Main_H-3_Nozzlenose_D.png',''),
+  (default, '','30px-Weapont_Main_H-3_Nozzlenose.png',''),
+  (default, '','30px-Weapont_Main_Heavy_Splatling_Deco.png',''),
+  (default, '','30px-Weapont_Main_Heavy_Splatling_Remix.png',''),
+  (default, '','30px-Weapont_Main_Heavy_Splatling.png',''),
+  (default, '','30px-Weapont_Main_Hero_Charger_Replica.png',''),
+  (default, '','30px-Weapont_Main_Hero_Roller_Replica.png',''),
+  (default, '','30px-Weapont_Main_Hero_Shot_Replica.png',''),
+  (default, '','30px-Weapont_Main_Hydra_Splatling.png',''),
+  (default, '','30px-Weapont_Main_Inkbrush_Nouveau.png',''),
+  (default, '','30px-Weapont_Main_Inkbrush.png',''),
+  (default, '','30px-Weapont_Main_Jet_Squelcher.png',''),
+  (default, '','30px-Weapont_Main_Kelp_Splat_Charger.png',''),
+  (default, '','30px-Weapont_Main_Kelp_Splatterscope.png',''),
+  (default, '','30px-Weapont_Main_Krak-On_Splat_Roller.png',''),
+  (default, '','30px-Weapont_Main_L-3_Nozzlenose_D.png',''),
+  (default, '','30px-Weapont_Main_L-3_Nozzlenose.png',''),
+  (default, '','30px-Weapont_Main_Luna_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Mini_Splatling.png',''),
+  (default, '','30px-Weapont_Main_N-ZAP_83.png',''),
+  (default, '','30px-Weapont_Main_N-ZAP_85.png',''),
+  (default, '','30px-Weapont_Main_N-ZAP_89.png',''),
+  (default, '','30px-Weapont_Main_Neo_Splash-o-matic.png',''),
+  (default, '','30px-Weapont_Main_Neo_Sploosh-o-matic.png',''),
+  (default, '','30px-Weapont_Main_New_Squiffer.png',''),
+  (default, '','30px-Weapont_Main_Octobrush_Nouveau.png',''),
+  (default, '','30px-Weapont_Main_Octobrush.png',''),
+  (default, '','30px-Weapont_Main_Octoshot_Replica.png',''),
+  (default, '','30px-Weapont_Main_Permanent_Inkbrush.png',''),
+  (default, '','30px-Weapont_Main_Range_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Rapid_Blaster_Deco.png',''),
+  (default, '','30px-Weapont_Main_Rapid_Blaster_Pro_Deco.png',''),
+  (default, '','30px-Weapont_Main_Rapid_Blaster_Pro.png',''),
+  (default, '','30px-Weapont_Main_Rapid_Blaster.png',''),
+  (default, '','30px-Weapont_Main_Refurbished_Mini_Splatling.png',''),
+  (default, '','30px-Weapont_Main_Slosher_Deco.png',''),
+  (default, '','30px-Weapont_Main_Slosher.png',''),
+  (default, '','30px-Weapont_Main_Sloshing_Machine_Neo.png',''),
+  (default, '','30px-Weapont_Main_Sloshing_Machine.png',''),
+  (default, '','30px-Weapont_Main_Soda_Slosher.png',''),
+  (default, '','30px-Weapont_Main_Splash-o-matic.png',''),
+  (default, '','30px-Weapont_Main_Splat_Charger.png',''),
+  (default, '','30px-Weapont_Main_Splat_Roller.png',''),
+  (default, '','30px-Weapont_Main_Splatterscope.png',''),
+  (default, '','30px-Weapont_Main_Splattershot_Jr..png',''),
+  (default, '','30px-Weapont_Main_Splattershot_Pro.png',''),
+  (default, '','30px-Weapont_Main_Splattershot.png',''),
+  (default, '','30px-Weapont_Main_Sploosh-o-matic_7.png',''),
+  (default, '','30px-Weapont_Main_Sploosh-o-matic.png',''),
+  (default, '','30px-Weapont_Main_Tempered_Dynamo_Roller.png',''),
+  (default, '','30px-Weapont_Main_Tentatek_Splattershot.png',''),
+  (default, '','30px-Weapont_Main_Tri-Slosher_Nouveau.png',''),
+  (default, '','30px-Weapont_Main_Tri-Slosher.png',''),
+  (default, '','30px-Weapont_Main_Wasabi_Splattershot.png',''),
+  (default, '','30px-Weapont_Main_Zink_Mini_Splatling.png',''),
