@@ -1,5 +1,7 @@
 CREATE DATABASE splatbase;
 
+
+
 CREATE TABLE member(
   id serial primary key,
   username varchar,
@@ -9,10 +11,8 @@ CREATE TABLE member(
   ranklevel varchar,
   freeAgent boolean,
   currTeam varchar,
-  captain boolean,
   aboutme varchar,
   views integer,
-  tagcolor varchar,
   lft boolean,
   endorse boolean
 );
@@ -21,7 +21,8 @@ CREATE TABLE member(
 CREATE TABLE membership(
   id serial primary key,
   member integer REFERENCES member(id),
-  team integer REFERENCES teams(id)
+  team integer REFERENCES teams(id),
+  captain boolean
 );
 
 CREATE TABLE teams(
@@ -153,3 +154,36 @@ INSERT INTO weapons values
   (default, 'Heavy Splatling_Remix','30px-Weapont_Main_Heavy_Splatling_Remix.png','Heavy_Splatling_Remix_HQ.png'),
   (default, 'Hydra Splatling','30px-Weapont_Main_Hydra_Splatling.png','Hydra_Splatling_HQ.png'),
   (default, 'Custom Hydra Splatling','30px-Weapont_Main_Custom_Hydra_Splatling.png','Custom_Hydra_Splatling_HQ.png')
+
+-- add 30 sasamplmembers
+INSERT INTO member values
+  (default, "username", "encryptedPassword", "NNID", "an avatar", "rank", "FreeAgent", "currTeam","about me", "views", "looking for team", "endorse")
+  (default, "Phlox", "PhloxofBirds", "NOTHING", "S+", FALSE, "Altaira", "NOTHING", 0, NULL, 0)
+  (default, "Bronze", "mountainboat", "NOTHING", "S+", FALSE, "Dank & Co", "NOTHING", 0, NULL, 0)
+  (default, "[Firefly]", "Zacrowski", "NOTHING", "S+", FALSE, "SpeedRunsLive", "NOTHING", 0, NULL, 0)
+  (default, "Sniffaluffagus/Kimaroki", "Sassyimpcole", "NOTHING", "S+", TRUE, NULL, "NOTHING", 0, TRUE, 0)
+  (default, "Kahlium", "rocketfish", "NOTHING", "S+", FALSE, "Haikara Memento", "NOTHING", 0, NULL, 0)
+  (default, "Chaotic", "Muscanator", "NOTHING", "S+", TRUE, NULL, "NOTHING", 0, TRUE, 0)
+  (default, "ThatSrb2DUDE", "ThatSrb2DUDE", "NOTHING", "S+", FALSE, "Team Olive", "NOTHING", 0, NULL, 0)
+  (default, "Wil", "DrCiele", "NOTHING", "S+", FALSE, "Deadbeat", "NOTHING", 0, NULL, 0)
+  (default, "charmcrwn", "charmcrwn", "NOTHING", "S+", FALSE, "Powerpoint", "NOTHING", 0, NULL, 0)
+  (default, "kyu", "kyustorm", "NOTHING", "S+", FALSE, "ıиκΔDelta", "NOTHING", 0, NULL, 0)
+  (default, "Shawn", "Kinoyo", "NOTHING", "S+", FALSE, "ıиκΔDelta", "NOTHING", 0, NULL, 0)
+  (default, "Pika_3k", "tepehuaje3", "NOTHING", "S+", FALSE, "Karios", "NOTHING", 0, NULL, 0)
+  (default, "WowItsCharles", "WowItsCharles", "NOTHING", "S+", FALSE, "Got Kraken", "NOTHING", 0, NULL, 0)
+  (default, "Inkling Splash", "Lordofdinoking95", "NOTHING", "S+", FALSE, "ıиκαAlpha", "NOTHING", 0, NULL, 0)
+  (default, "OliverNEW", "PaddyHerz2000", "NOTHING", "S+", TRUE, NULL, "NOTHING", 0, TRUE, 0)
+  (default, "Sakito", "Sakito1234", "NOTHING", "S+", FALSE, "Extinction", "NOTHING", 0, NULL, 0)
+  (default, "Yoshi", "higang", "NOTHING", "S+", FALSE, "Twisted Fate", "NOTHING", 0, NULL, 0)
+  (default, "Shoe", "hhhhsu", "NOTHING", "S+", FALSE, "Endless Oceans", "NOTHING", 0, NULL, 0)
+  (default, "Magyk", "NoHaxJustMagyk", "NOTHING", "S+", FALSE, "Arashi", "NOTHING", 0, NULL, 0)
+  (default, "💜💚 διмεητισ 💫", "Achroma", "NOTHING", "S+", FALSE, "Karios", "NOTHING", 0, NULL, 0)
+  (default, "skrSquiddo","HearteyesEmoji", "NOTHING", "S+", FALSE, "Spicy Kracken Rolls", "NOTHING", 0, NULL, 0)
+  (default, "Inuranchan","Inuranchan", "NOTHING", "S+", FALSE, "The Leftovers", "NOTHING", 0, NULL, 0)
+  (default, "Ninjaaa", "Ninjaaa121", "NOTHING", "S+", FALSE, "Tuna on Toast", "NOTHING", 0, NULL, 0)
+  (default, "Inkakira", "Absentplayer", "NOTHING", "S+", FALSE, "ıиκαAlpha", "NOTHING", 0, NULL, 0)
+  (default, "Sparrøw", "Sqd_girumaru", "NOTHING", "S+", FALSE, "ıиκαAlpha", "NOTHING", 0, NULL, 0)
+  (default, "Flarablitz", "Flarablitz", "NOTHING", "S+", FALSE, "Spicy Kraken Rolls", "NOTHING", 0, NULL, 0)
+  (default, "пт Luci ‹з", "huntingforfrogs", "NOTHING", "S+", FALSE, "Notorious", "NOTHING", 0, NULL, 0)
+  (default, "The One", "Theone77777", "NOTHING" ,"S+", FALSE, "Endless Oceans", "Unity", 0, NULL, 0)
+  (default, "S&C#Helix", "SnowballPumpkin", "NOTHING", "S+", FALSE, "Squids and Chips", "NOTHING", 0, NULL, 0)
