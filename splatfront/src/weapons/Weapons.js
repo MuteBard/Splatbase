@@ -10,7 +10,7 @@ class Weapons extends React.Component{
   render(){
     return(
       <div>
-        <h1>TEST</h1>
+        <h1>TEST WEAPONS</h1>
         <h1> Confirm reducer pass : {this.props.data}</h1>
       </div>
     )

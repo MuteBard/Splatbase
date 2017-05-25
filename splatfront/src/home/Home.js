@@ -4,10 +4,14 @@ import * as actions from './Home.actions';
 
 class Home extends React.Component{
 
+  componentDidMount(){
+    this.props.testing()
+  }
   render(){
     return(
       <div>
-        <h1>Home TEST</h1>
+        <h1>TEST HOME</h1>
+        <h1> Confirm reducer pass : {this.props.data}</h1>
       </div>
     )
   }

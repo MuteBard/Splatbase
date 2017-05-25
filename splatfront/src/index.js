@@ -47,6 +47,10 @@ class AppLayout extends React.Component{
       <div>
         <ul className="nav">
           <li><IndexLink to="/" activeClassName="active">Home</IndexLink></li>
+          <li><IndexLink to="/signup" activeClassName="active">Sign Up</IndexLink></li>
+          <li><IndexLink to="/members" activeClassName="active">Members</IndexLink></li>
+          <li><IndexLink to="/teams" activeClassName="active">Teams</IndexLink></li>
+          <li><IndexLink to="/weapons" activeClassName="active">weapons</IndexLink></li>
         </ul>
         {this.props.children}
       </div>
@@ -59,7 +63,9 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={AppLayout}>
         <IndexRoute component={HomeContainer}/>
-
+        <Route path="/signup" component={SignUpContainer}/>
+        <Route path="/members" component={MembersContainer}/>
+        <Route path="/teams" component={TeamsContainer}/>
         <Route path="/weapons" component={WeaponsContainer}/>
       </Route>
     </Router>
@@ -68,6 +74,3 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
-// <Route Path="/signup" component={SignUpContainer}/>
-// <Route Path="/members" component={MembersContainer}/>
-// <Route Path="/teams" component={TeamsContainer}/>
