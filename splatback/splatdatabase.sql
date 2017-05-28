@@ -44,12 +44,12 @@ CREATE TABLE memberhasweapon(
 );
 
 -- MERGER BETWEEN member AND member
-CREATE TABLE recommendations(
-    id serial PRIMARY KEY,
-    giver integer REFERENCES member(id),
-    receiver integer REFERENCES member(id),
-    rtext varchar
-);
+-- CREATE TABLE recommendations(
+--     id serial PRIMARY KEY,
+--     giver integer REFERENCES member(id),
+--     receiver integer REFERENCES member(id),
+--     rtext varchar
+-- );
 
 -- added weapons
 INSERT INTO weapons values
