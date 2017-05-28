@@ -1,4 +1,4 @@
-Timestamp,Username,NNID,Avatar Image Link (optional),Rank,List up to 3 weapons that you use,Past teams that you were in,Team Status ,Are you looking for a Team,Name of your Team,Team Logo (Optional),Captain's Name
+TIMESTAMP,USERNAME,NNID,AVATAR,RANK,LIST3,PAST,STATUS,LFT,NOT,LOGO,CAPTIAN
 5/24/2017 13:05:48,Phlox,PhloxofBirds,,S+,"Tentatek, .96 Deco, Heavy Deco","Squidgeons, Altaira, SquidKids affiliation",In a Team,,Altaira,,Phlox
 5/24/2017 13:07:56,Bronze,mountainboat,,S+,"CRB, ttek, slosher","Midnight Wasps, Wabisabi, Dank Determination, Twilight Tundra, Chikara, Nexus, Stratosphere",In a Team,,Dank & Co,,Bronze
 5/24/2017 13:08:08,[Firefly],Zacrowski,https://puu.sh/w06Xx/a1914a3fbd.png,S+,"Bamboozler (All 3), E-liter 3k Scoped, Neo Splash-o-Matic",None,In a Team,,SpeedRunsLive,https://puu.sh/w074g/d9670ff068.png,[2dos]
@@ -22,7 +22,7 @@ Timestamp,Username,NNID,Avatar Image Link (optional),Rank,List up to 3 weapons t
 5/24/2017 14:03:16,skrSquiddo,HearteyesEmoji,,S+,"E-liter, CRB, Dynamo",Spicy Kraken Rolls,In a Team,,Spicy Kraken Rolls,,Flarablitz/Bobthehoboiscool
 5/24/2017 14:04:25,Inuranchan,Inuranchan,,S+,"Wasabi Splattershot, N-Zap, Forge Splattershot Pro",The Leftovers [this is the only team I've been in],In a Team,,The Leftovers,http://pre11.deviantart.net/9368/th/pre/f/2017/023/4/8/the_leftovers2_by_inurantchan-dawjln0.png,Inuranchan
 5/24/2017 14:07:22,Ninjaaa,Ninjaaa121,,S+,ttek/zimi/luna,"IU, sX, TD, Sunken squids, paradox, disband, kraken paradise",In a Team,,Tuna on Toast,,Me
-5/24/2017 14:08:32,Inkakira,Absentplayer,,S+,"E-Liter 3K scope, Splatterscope","Squid wars competitive, Krakens for days, Nexus, Splatforce" Current - ıиκ: alpha division",In a Team,,ıиκ (alpha division),,ıиκΔrafa
+5/24/2017 14:08:32,Inkakira,Absentplayer,,S+,"E-Liter 3K scope, Splatterscope","Squid wars competitive, Krakens for days, Nexus, Splatforce Current - ıиκ: alpha division",In a Team,,ıиκ (alpha division),,ıиκΔrafa
 5/24/2017 14:13:14,Sparrøw ,Sqd_girumaru ,,S,"Krak On Roller, Luna, Splatter shot Pro","Swe, fsi, ink",In a Team,,Ink Alpha,,Inkalvin
 5/24/2017 14:13:32,Flarablitz,Flarablitz,,S+,"Roller, Snipe",Spicy Kraken Rolls,In a Team,,Spicy Kraken Rolls,,"Flara, Bobthehoboiscool"
 5/24/2017 14:17:11,пт Luci ‹з,huntingforfrogs,https://cdn.discordapp.com/attachments/211672905027682305/317002682248200192/bloop.png,S+,"E Litre 3K Scopes, Heavy Splatlings, Octoshot","New Squids on the Block, Densetsu, Conquest, Notorious",In a Team,,Notorious,,Chim/Luci

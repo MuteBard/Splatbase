@@ -10,6 +10,9 @@
   "license": "ISC",
   "dependencies": {
     "csv": "^1.1.1",
-    "csv-parse": "^1.2.0"
+    "csv-parse": "^1.2.0",
+    "csv-parser": "^1.11.0",
+    "fs": "0.0.1-security",
+    "pg-promise": "^5.7.1"
   }
 }
