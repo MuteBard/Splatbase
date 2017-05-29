@@ -4,14 +4,24 @@ import * as actions from './Weapons.actions';
 
 class Weapons extends React.Component{
   componentDidMount(){
-    this.props.testing()
+    this.props.allWeapons()
   }
 
   render(){
     return(
       <div>
+      <img src="../../images/backgrounds/blueweb.png" className="coverItem"/>
+
+
+
         <h1>TEST WEAPONS</h1>
-        <h1> Confirm reducer pass : {this.props.data}</h1>
+        
+
+        <div>
+            {this.props.data.map((obj, idx) =>
+                <li key={idx}> {obj.name} </li>
+            )}
+        </div>
       </div>
     )
   }
