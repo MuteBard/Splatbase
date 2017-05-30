@@ -35,4 +35,10 @@ app.get('/api/weapons_large', (req, resp, next) => {
     .catch(next);
 });
 
+app.get('/api/member', (req, resp, next) => {
+  db.any('select * from member')
+    .then(data => resp.json(data))
+    .catch(next);
+});
+
 app.listen(4000, () => console.log('Listening on 4000.'));

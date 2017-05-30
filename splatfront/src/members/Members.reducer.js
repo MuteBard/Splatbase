@@ -1,12 +1,12 @@
 const INITAL_STATE = {
-  data: 0
+  data: []
 };
 
 export default function reducer(state = INITAL_STATE, action){
-  console.log(action.type)
-  if (action.type === "testing"){
+  if (action.type === "memALL"){
+    console.log(action.value)
     return Object.assign({},state, {
-      data: 1
+      data: action.value
     });
   }
   return state;
