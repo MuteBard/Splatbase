@@ -34,4 +34,15 @@ app.get('/api/team', (req, resp, next) => {
     .catch(next);
 });
 
+app.post('/api/weapons', (req, resp, next) => {
+    let query = req.body.find;
+    console.log(query)
+    db.any(`select * from weapons where name ilike $1`,"%"+query+"%")
+    .then(data => resp.json(data))
+    .catch(next)
+});
+
+
+
+
 app.listen(4000, () => console.log('Listening on 4000.'));

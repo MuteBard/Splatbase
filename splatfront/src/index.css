@@ -1,5 +1,12 @@
 *{
     box-sizing: border-box;
+
+}
+
+html{
+    background-color:black;
+    color:white;
+    background-image: url("blueweb.png");
 }
 
 .contentContainer{
@@ -17,7 +24,7 @@
     opacity: 0.8;
     filter: alpha(opacity=80); /* For IE8 and earlier */
     border-radius: 10px;
-    margin-top: .8em;
+    margin-top: 16.5em;
     margin-left: 3em;
 
 }
@@ -31,7 +38,7 @@
 
 .text{
     font-family: consolas,sans-serif;
-    font-size: 2.5em;
+    font-size: 2em;
     color: white;
     font-weight: bold;
 }
@@ -91,3 +98,18 @@ img{
     -moz-box-shadow: 0 0 20px green;
     box-shadow:0 0 20px green;
 }
+
+.searchContainer{
+    /*vertical-align: middle;*/
+    text-align: center;
+    margin-right:
+}
+.search{
+    margin: 3em 0 3em 0;
+    width: 400px;
+    height: 50px;
+    font-size: 2em;
+}
+
+/*https://www.sanwebe.com/2014/08/css-html-forms-designs*/
+/*check number 8*/

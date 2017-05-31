@@ -1,8 +1,9 @@
 import $ from 'jquery'
 
-export function testing(){
+export function testing(text){
   return{
-    type: "testing"
+    type: "testing",
+    value: text
   };
 }
 
