@@ -29,7 +29,7 @@ export function updateSearch(query){
             }),
             method: 'post',
             dataType: 'JSON',
-            contentType: 'application.json'
+            contentType: 'application/json'
         })
     }
     return asyncAction;
