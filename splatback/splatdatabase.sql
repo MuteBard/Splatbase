@@ -1,5 +1,4 @@
-CREATE DATABASE splatbase;
-
+-- 1) COPY THE TABLES FIRST THEN PUT IN DATABASE QUERY
 CREATE TABLE member(
     id serial primary key,
     username varchar,
@@ -14,9 +13,6 @@ CREATE TABLE member(
     endorse integer
 );
 
--- MERGER BETWEEN member AND teams
-
-
 CREATE TABLE teams(
     id serial primary key,
     teamname varchar,
@@ -28,7 +24,6 @@ CREATE TABLE teams(
     endorse boolean
 );
 
--- Static table
 CREATE TABLE weapons(
     id serial primary key,
     name varchar,
@@ -36,14 +31,12 @@ CREATE TABLE weapons(
     imagelarge varchar
 );
 
--- MERGER BETWEEN member AND weapons
 CREATE TABLE memberhasweapon(
     id serial primary key,
     member integer REFERENCES member(id),
     weapon integer REFERENCES weapons(id)
 );
 
--- MERGER BETWEEN member AND member
 -- CREATE TABLE recommendations(
 --     id serial PRIMARY KEY,
 --     giver integer REFERENCES member(id),
@@ -51,7 +44,7 @@ CREATE TABLE memberhasweapon(
 --     rtext varchar
 -- );
 
--- added weapons
+-- 2) COPY THE WEAPONS THEN PUT IN DATABASE QUERY
 INSERT INTO weapons values
     (DEFAULT, 'Splattershot Jr','30px-Weapont_Main_Splattershot_Jr.png','Splattershot_Jr._HQ.png'),
     (DEFAULT, 'Custom Splattershot Jr','30px-Weapont_Main_Custom_Splattershot_Jr.png','Custom_Splattershot_Jr._HQ.png'),
@@ -145,7 +138,8 @@ INSERT INTO weapons values
     (DEFAULT, 'Hydra Splatling','30px-Weapont_Main_Hydra_Splatling.png','Hydra_Splatling_HQ.png'),
     (DEFAULT, 'Custom Hydra Splatling','30px-Weapont_Main_Custom_Hydra_Splatling.png','Custom_Hydra_Splatling_HQ.png');
 
---player weapon pairings
+--FOR STEPS 3 AND 4, LEAVE SPLATBACK DIRECTORY AND ENTER DATAIMPORT DIRECTORY. LOAD IMPORT.JS
+-- 5) (WARNING DO 3 and 4 FIRST) COPY THE PAIRINGS THEN PUT IN DATABASE QUERY
 INSERT INTO memberhasweapon values
     (DEFAULT,1,4),
     (DEFAULT,1,34),

@@ -1,3 +1,4 @@
+//NPM INSTALL FIRST
 const csv = require('csv-parser');
 const fs = require('fs');
 const pgp = require('pg-promise')({
@@ -6,7 +7,7 @@ const pgp = require('pg-promise')({
 const dbConfig = require('./secret/db-config');
 const db = pgp(dbConfig);
 
-//add members
+// STEP 3 UNCOMMENT FROM LINE 10 to 31 ONLY TO INSERT MEMBERS. COMMENT WHEN FILE HAS RUN
 // fs.createReadStream('splatdata.csv', {encoding: "utf8"})
 //   .pipe(csv()) //what does this do?
 //   .on('data', function (data) {
@@ -28,9 +29,10 @@ const db = pgp(dbConfig);
 //              null,
 //              null
 //             )`, data)
-// });
+//});
 
 
+// STEP 4 UNCOMMENT FROM LINE 36 to 54 TO INSERT TEAMS. COMMENT WHEN FILE HAS RUN
 // fs.createReadStream('splatdata.csv', {encoding: "utf8"})
 //   .pipe(csv()) //what does this do?
 //   .on('data', function (data) {
@@ -50,22 +52,3 @@ const db = pgp(dbConfig);
 //            null
 //           )`, data)
 // });
-
-fs.createReadStream('splatdata.csv', {encoding: "utf8"})
-  .pipe(csv()) //what does this do?
-  .on('data', function (data) {
-      let list3 = data.LIST3.split()
-      console.log(list3)
-      db.none(`
-          insert into teams values
-          (
-           DEFAULT,
-           $(USERNAME),
-           $(LOGO),
-           $(CAPTAIN),
-           null,
-           null,
-           null,
-           null
-          )`, data)
-});

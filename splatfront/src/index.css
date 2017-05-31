@@ -18,14 +18,15 @@ html{
 
 .sidebar{
     /*border : 5px solid yellow;*/
-    width: 12.55%;
+    width: 17%;
     position: fixed;
     background-color: black;
     opacity: 0.8;
     filter: alpha(opacity=80); /* For IE8 and earlier */
     border-radius: 10px;
-    margin-top: 16.5em;
+    margin-top: 12em;
     margin-left: 3em;
+    text-align: center;
 
 }
 
@@ -43,9 +44,13 @@ html{
     font-weight: bold;
 }
 
-a:visited{
-    color:green;
+a:link{
+  text-decoration: none;
+}
 
+a:visited{
+  color:green;
+  text-decoration: none;
 }
 
 .weaponLibrary, .memberLibrary, .teamLibrary{
@@ -105,7 +110,7 @@ img{
     margin-right:
 }
 .search{
-    margin: 3em 0 3em 0;
+    margin: 2em 0 2em 0;
     width: 400px;
     height: 50px;
     font-size: 2em;

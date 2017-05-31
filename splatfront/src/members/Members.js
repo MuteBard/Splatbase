@@ -12,7 +12,7 @@ class Members extends React.Component{
         return(
             <div>
                 <div className="searchContainer">
-                    <input className="search" type="text" value={this.props.text} onChange={event => this.props.testing(event.target.value)}/>
+                    <input className="search" type="text" value={this.props.text} onChange={event => this.props.updateSearch(event.target.value)}/>
                 </div>
                 <div className="memberLibrary">
                     {this.props.data.map((obj, idx) =>

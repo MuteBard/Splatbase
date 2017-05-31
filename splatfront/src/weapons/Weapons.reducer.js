@@ -11,7 +11,7 @@ export default function reducer(state = INITAL_STATE, action){
             text:action.value
         })
     }
-    if (action.type === "wepALL"){
+    if (action.type === "wepSort" ||  action.type == "wepALL"){
         return Object.assign({},state, {
             data: action.value
         });
