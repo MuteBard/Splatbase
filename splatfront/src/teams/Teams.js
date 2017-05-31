@@ -3,22 +3,28 @@ import * as ReactRedux from 'react-redux';
 import * as actions from './Teams.actions';
 
 class Teams extends React.Component{
-  componentDidMount(){
-    this.props.testing()
+    componentDidMount(){
+        this.props.allTeams()
   }
 
-  render(){
-    return(
-      <div>
-        <h1>TEST TEAMS</h1>
-        <h1> Confirm reducer pass : {this.props.data}</h1>
-      </div>
-    )
-  }
-}
+    render(){
+        return(
+            <div>
+                <div className="teamLibrary">
+                    {this.props.data.map((obj, idx) =>
+                        <div className="teamLibraryItem">
+                            <h1 key={idx}> {obj.teamname} </h1>
+                            <h1> {`Captain: ${obj.captain}`} </h1>
+                        </div>
+                    )}
+                </div>
+            </div>
+        )
+      }
+    }
 
 const TeamsContainer = ReactRedux.connect(
-  state => state.weapons,
+  state => state.teams,
   actions
 )(Teams);
 

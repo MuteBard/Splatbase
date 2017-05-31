@@ -16,7 +16,6 @@ class Weapons extends React.Component{
                     <div className="weaponLibraryItem">
                         <img key={idx} src={`../../images/weapons/${obj.imagelarge}`} height="100px"/>
                         <h1> {obj.name} </h1>
-                        <img src={`../../images/miniwep/${obj.imagesmall}`}/>
                     </div>
                 )}
             </div>

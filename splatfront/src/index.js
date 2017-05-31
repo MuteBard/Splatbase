@@ -43,6 +43,9 @@ const store = Redux.createStore(
 
 class AppLayout extends React.Component{
   render() {
+      console.log("TEST123")
+      let routeStr = (this.props.location.pathname).substring(1,this.props.location.pathname.length);
+      routeStr = ( routeStr.indexOf("/") != -1 ? (0,routeStr.indexOf("/")):routeStr)
     return(
       <div>
         <div className="contentContainer">

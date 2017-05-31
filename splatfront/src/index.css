@@ -14,9 +14,12 @@
     width: 12.55%;
     position: fixed;
     background-color: black;
-    opacity: 0.7;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
     border-radius: 10px;
+    margin-top: .8em;
+    margin-left: 3em;
+
 }
 
 
@@ -38,29 +41,38 @@ a:visited{
 
 }
 
-.weaponLibrary, .memberLibrary{
+.weaponLibrary, .memberLibrary, .teamLibrary{
     display: flex;
     flex-wrap: wrap;
     /*border : 5px solid green;*/
-    margin: 0 0 0 15em;
+    margin: 0 0 0 20em;
 }
 
-.weaponLibraryItem, .memberLibraryItem{
+.weaponLibraryItem, .memberLibraryItem, .teamLibraryItem{
     /*border : 5px solid lightcoral;*/
     width : 30%;
     margin: 1em 1em 1em 1em;
     text-align: center;
 }
 
-.memberLibraryItem, .weaponLibraryItem{
+.teamLibraryItem{
+    width : 45%;
+}
+
+
+.memberLibraryItem, .weaponLibraryItem, .teamLibraryItem{
     color:cyan;
     background-color: black;
     opacity: 0.7;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
+    filter: alpha(opacity=70); /* For IE8 and earlier */
     border-radius: 10px;
 }
 
-.memberLibraryItem:hover, .weaponLibraryItem:hover{
+img{
+   opacity: 1;
+   filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+.memberLibraryItem:hover, .weaponLibraryItem:hover, .teamLibraryItem:hover{
     opacity: 0.7;
     background-color: white;
     filter: alpha(opacity=70); /* For IE8 and earlier */
@@ -70,4 +82,12 @@ a:visited{
     -moz-box-shadow: 0 0 20px white;
     box-shadow:0 0 20px white;
     color:blue;
+}
+
+.js-nav-link:hover{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    -webkit-box-shadow:0 0 20px green;
+    -moz-box-shadow: 0 0 20px green;
+    box-shadow:0 0 20px green;
 }
