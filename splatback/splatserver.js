@@ -40,7 +40,7 @@ app.post('/api/weapons', (req, resp, next) => {
     db.any(`select * from weapons where name ilike $1`,"%"+query+"%")
     .then(data => resp.json(data))
     .catch(next)
-});
+}); 
 
 
 

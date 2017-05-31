@@ -1,6 +1,6 @@
 import $ from 'jquery'
 
-export function testing(text){
+export function updateText(text){
   return{
     type: "testing",
     value: text
@@ -19,17 +19,20 @@ export function allWeapons() {
 }
 
 export function updateSearch(query){
-//     let asyncAction = function(dispatch){
-//         $.ajax({
-//             url: 'http://localhost:4000/api/weapons/',
-//             data: JSON.stringify({
-//                 find: query
-//             }),
-//             method: 'post',
-//             dataType: 'JSON',
-//             contentType: 'application.json'
-//         })
-//     }
+    let asyncAction = function(dispatch){
+        dispatch(updateText(query))
+        console.log(query)
+        $.ajax({
+            url: 'http://localhost:4000/api/weapons/',
+            data: JSON.stringify({
+                find: query,
+            }),
+            method: 'post',
+            dataType: 'JSON',
+            contentType: 'application.json'
+        })
+    }
+    return asyncAction;
 }
 
 
