@@ -12,7 +12,7 @@ class Weapons extends React.Component{
     return(
         <div>
             <div className="searchContainer">
-                <input className="search" type="text" value={this.props.text} onChange={event => this.props.updateSearch(event.target.value)}/>
+                <input className="search" placeholder="Enter a weapons's name" type="text" value={this.props.text} onChange={event => this.props.updateSearch(event.target.value)}/>
             </div>
             <div className="weaponLibrary">
                 {this.props.data.map((obj, idx) =>
@@ -33,15 +33,3 @@ const WeaponsContainer = ReactRedux.connect(
 )(Weapons);
 
 export default WeaponsContainer
-
-
-// .sidebar{
-//     /*flex: 1.3;*/
-//     display: flex;
-//     flex-wrap: wrap;
-//     border : 5px solid yellow;
-//     /*min-height: 100%;*/
-//     background-color: black;
-//     height:100%;
-//
-// }
