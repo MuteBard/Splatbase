@@ -9,6 +9,17 @@ class SignUp extends React.Component{
     this.props.allWeapons()
   }
 
+  packMember(){
+    let data = {
+      username: this.props.signup.username,
+      nnid: this.props.signup.nnid,
+      team:this.props.signup.team,
+      weps: this.props.signup.weps
+    }
+    return data;
+  }
+
+
   render(){
     return(
       <div className="l1">
@@ -47,6 +58,14 @@ class SignUp extends React.Component{
                 </div>
             )}
           </div>
+              <button className="button" onClick={() => {this.props.addMember(this.packMember())}}>Submit</button>
+          <div>
+
+
+
+          </div>
+
+
         </div>
       </div>
     )

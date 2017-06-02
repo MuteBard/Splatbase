@@ -45,3 +45,21 @@ export function allTeams() {
   }
   return asyncAction;
 }
+
+export function addMember(query){
+    let asyncAction = function(dispatch){
+        $.ajax({
+            url: 'http://localhost:4000/api/addmember/',
+            data: JSON.stringify({
+              addmember: query,
+            }),
+            method: 'post',
+            dataType: 'JSON',
+            contentType: 'application/json'
+        }).then(data => dispatch({
+            type:'addedMember',
+            value:data,
+        }))
+    }
+    return asyncAction;
+}

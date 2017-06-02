@@ -58,6 +58,15 @@ app.post('/api/team', (req, resp, next) => {
     .catch(next)
 });
 
+app.post('/api/addmember', (req,resp,next) => {
+  let query = req.body.addmember;
+  console.log(query)
+
+  db.one(`select teamname from teams where id = $1`, query.team) //any turns a result into an array. one will strip away that array
+  .then((result) => (db.any(`insert into member (username, nnid, currteam) values ($1, $2, $3)`,[query.username , query.nnid, result.teamname])))
+  .then(data => resp.json(data))
+  .catch(next)
+})
 
 
 app.listen(4000, () => console.log('Listening on 4000.'));

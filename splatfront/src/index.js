@@ -50,7 +50,6 @@ class AppLayout extends React.Component{
       <div>
         <div className="contentContainer">
             <div className="sidebar">
-              <div className="sidebarItem text home"><IndexLink to="/" activeClassName="active">Home</IndexLink></div>
               <div className="sidebarItem text signup"><IndexLink to="/signup" activeClassName="active">Sign Up</IndexLink></div>
               <div className="sidebarItem text members"><IndexLink to="/members" activeClassName="active">Members</IndexLink></div>
               <div className="sidebarItem text Teams"><IndexLink to="/teams" activeClassName="active">Teams</IndexLink></div>
@@ -79,3 +78,5 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
+
+// <div className="sidebarItem text home"><IndexLink to="/" activeClassName="active">Home</IndexLink></div>

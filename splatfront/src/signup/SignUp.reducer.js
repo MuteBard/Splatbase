@@ -18,7 +18,7 @@ export default function reducer(state = INITAL_STATE, action){
 
   }else if (action.type === "insertTeam"){
     return Object.assign({},state, {
-      weps: action.value
+      team: action.value
     });
 
   }else if(action.type === "insertWep"){
