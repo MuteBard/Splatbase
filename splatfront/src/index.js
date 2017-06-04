@@ -78,5 +78,4 @@ ReactDOM.render(
 );
 
 registerServiceWorker();
-
 // <div className="sidebarItem text home"><IndexLink to="/" activeClassName="active">Home</IndexLink></div>
