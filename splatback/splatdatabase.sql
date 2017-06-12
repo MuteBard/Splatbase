@@ -35,7 +35,7 @@ CREATE TABLE memberhasweapon(
     id serial primary key,
     member integer REFERENCES member(id),
     weapon integer REFERENCES weapons(id)
-);
+); 
 
 -- CREATE TABLE recommendations(
 --     id serial PRIMARY KEY,
