@@ -13,6 +13,7 @@ class Teams extends React.Component{
                 <div className="searchContainer">
                     <input className="search"  placeholder="Enter a team's name" type="text" value={this.props.text} onChange={event => this.props.updateSearch(event.target.value)}/>
                 </div>
+                <span className="ghostspace1"></span>
                 <div className="teamLibrary">
                     {this.props.data.map((obj, idx) =>
                         <div className="teamLibraryItem">

@@ -14,14 +14,15 @@ class Weapons extends React.Component{
             <div className="searchContainer">
                 <input className="search" placeholder="Enter a weapons's name" type="text" value={this.props.text} onChange={event => this.props.updateSearch(event.target.value)}/>
             </div>
-            <div className="weaponLibrary">
+            <span className="ghostspace1"></span>
+            <span className="weaponLibrary">
                 {this.props.data.map((obj, idx) =>
-                    <div className="weaponLibraryItem">
+                    <span className="weaponLibraryItem">
                         <img key={idx} src={`../../images/weapons/${obj.imagelarge}`} height="100px"/>
                         <h1> {obj.name} </h1>
-                    </div>
+                    </span>
                 )}
-            </div>
+            </span>
         </div>
     )
   }

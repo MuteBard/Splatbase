@@ -23,7 +23,9 @@ class SignUp extends React.Component{
   render(){
     return(
       <div className="l1">
+        <span className="ghostspace1"></span>
         <div className="l2">
+
           <div className="l3">
 
             <input
