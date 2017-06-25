@@ -3,4 +3,4 @@ if (window.location.hostname != 'localhost'){
   BASEURL = '';
 }
 
-export BASEURL;
+export default BASEURL;
