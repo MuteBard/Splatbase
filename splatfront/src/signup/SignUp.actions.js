@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import BASEURL from '../baseurl'
 
 export function addUsername(data){
   return{
@@ -26,7 +27,7 @@ export function addWep(idx){
 }
 export function allWeapons() {
   let asyncAction = function(dispatch) {
-    $.get('http://localhost:4000/api/weapons/')
+    $.get(`${BASEURL}api/weapons/`)
      .then(data => dispatch({
         type: 'wepALL',
         value: data
@@ -37,7 +38,7 @@ export function allWeapons() {
 
 export function allTeams() {
   let asyncAction = function(dispatch) {
-    $.get('http://localhost:4000/api/team/')
+    $.get(`${BASEURL}/api/team/`)
      .then(data => dispatch({
         type: 'teamALL',
         value: data
@@ -49,7 +50,7 @@ export function allTeams() {
 export function addMember(query){
     let asyncAction = function(dispatch){
         $.ajax({
-            url: 'http://localhost:4000/api/addmember/',
+            url: `${BASEURL}/api/addmember/`,
             data: JSON.stringify({
               addmember: query,
             }),

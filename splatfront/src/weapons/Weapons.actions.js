@@ -1,4 +1,5 @@
 import $ from 'jquery'
+import BASEURL from '../baseurl'
 
 export function updateText(text){
   return{
@@ -9,7 +10,7 @@ export function updateText(text){
 
 export function allWeapons() {
   let asyncAction = function(dispatch) {
-    $.get('http://localhost:4000/api/weapons/')
+    $.get(`${BASEURL}/api/weapons/`)
      .then(data => dispatch({
         type: 'wepALL',
         value: data
@@ -22,7 +23,7 @@ export function updateSearch(query){
     let asyncAction = function(dispatch){
         dispatch(updateText(query))
         $.ajax({
-            url: 'http://localhost:4000/api/weapons/',
+            url: `${BASEURL}/api/weapons/`,
             data: JSON.stringify({
               find: query,
             }),
