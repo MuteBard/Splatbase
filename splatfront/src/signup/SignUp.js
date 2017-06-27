@@ -61,13 +61,6 @@ class SignUp extends React.Component{
             )}
           </div>
               <button className="button" onClick={() => {this.props.addMember(this.packMember())}}>Submit</button>
-          <div>
-
-
-
-          </div>
-
-
         </div>
       </div>
     )

@@ -9,9 +9,9 @@ export default function reducer(state = INITAL_STATE, action){
         let tempText = action.value
         return Object.assign({},state, {
             text:action.value
-        })
+        });
     }
-    if (action.type === "wepSort" ||  action.type == "wepALL"){
+    else if (action.type === "wepSort" ||  action.type == "wepALL"){
         return Object.assign({},state, {
             data: action.value
         });

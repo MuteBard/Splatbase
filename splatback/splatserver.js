@@ -15,6 +15,7 @@ const db = pgp(dbConfig);
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/api/weapons', (req, resp, next) => {
   db.any('select * from weapons')
@@ -50,13 +51,22 @@ app.post('/api/member', (req, resp, next) => {
     .catch(next)
 });
 
+
+app.post('/api/memberselect', (req, resp, next) => {
+    let query = req.body.id;
+    console.log(query)
+    db.one(`select * from member where id = $1`, query)
+    .then(data => resp.json(data))
+    .catch(next)
+});
+
 app.post('/api/team', (req, resp, next) => {
     let query = req.body.find;
     console.log(query)
     db.any(`select * from teams where teamname ilike $1`,"%"+query+"%")
     .then(data => resp.json(data))
     .catch(next)
-});
+})
 
 app.post('/api/addmember', (req,resp,next) => {
   let query = req.body.addmember;

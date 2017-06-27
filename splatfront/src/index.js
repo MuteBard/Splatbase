@@ -22,7 +22,8 @@ import TeamsContainer from './teams/Teams'
 import teamsReducer from './teams/Teams.reducer'
 import WeaponsContainer from './weapons/Weapons'
 import weaponsReducer from './weapons/Weapons.reducer'
-
+import ProfileContainer from './profile/Profile'
+import profileReducer from './profile/Profile.reducer'
 import registerServiceWorker from './registerServiceWorker';
 
 //sum up all the reducers into one reducer to feed into the store
@@ -31,7 +32,8 @@ const reducer = Redux.combineReducers({
   signup: signUpReducer,
   member: membersReducer,
   teams: teamsReducer,
-  weapons: weaponsReducer
+  weapons: weaponsReducer,
+  prof: profileReducer
 });
 
 //create a location call the store where the state of the DOM will be kept and updated for containers to see
@@ -43,7 +45,7 @@ const store = Redux.createStore(
 
 class AppLayout extends React.Component{
   render() {
-      console.log("TEST123")
+
       let routeStr = (this.props.location.pathname).substring(1,this.props.location.pathname.length);
       routeStr = ( routeStr.indexOf("/") != -1 ? (0,routeStr.indexOf("/")):routeStr)
     return(
@@ -54,6 +56,7 @@ class AppLayout extends React.Component{
               <div className="sidebarItem text members"><IndexLink to="/members" activeClassName="active">Members</IndexLink></div>
               <div className="sidebarItem text Teams"><IndexLink to="/teams" activeClassName="active">Teams</IndexLink></div>
               <div className="sidebarItem text weapons"><IndexLink to="/weapons" activeClassName="active">Weapons</IndexLink></div>
+              <div className="sidebarItem text"><IndexLink to="/profile" activeClassName="active">Profile</IndexLink></div>
             </div>
             {this.props.children}
         </div>
@@ -71,6 +74,7 @@ ReactDOM.render(
         <Route path="/members" component={MembersContainer}/>
         <Route path="/teams" component={TeamsContainer}/>
         <Route path="/weapons" component={WeaponsContainer}/>
+        <Route path="/profile" component={ProfileContainer}/>
       </Route>
     </Router>
   </ReactRedux.Provider>,

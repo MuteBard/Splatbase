@@ -161,11 +161,12 @@ a:visited{
 
 }
 
-.weaponLibrary, .memberLibrary, .teamLibrary{
+
+.weaponLibrary, .memberLibrary, .teamLibrary, .profLibrary{
     display: flex;
     flex-wrap: wrap;
-    width : 73%;
-    /*border : 5px solid green;*/
+    width : 74%;
+    /*border : 5px solid yellow;*/
     border-radius: 10px;
 
     margin: 0 0 0 5em;
@@ -173,7 +174,19 @@ a:visited{
     /*width : 100%;*/
 }
 
-.weaponLibraryItem, .memberLibraryItem, .teamLibraryItem{
+.profLibrary{
+  width : 70%;
+  margin: 0 0 0 0;
+  /*border : 5px solid green;*/
+  float: left;
+  margin-top: 8em;
+
+
+
+}
+
+
+.weaponLibraryItem, .memberLibraryItem, .teamLibraryItem, .profLibraryItem{
     /*border : 5px solid lightcoral;*/
     margin: 1em 1em 1em 1.5em;
     text-align: center;
@@ -200,6 +213,14 @@ a:visited{
 .memberLibraryItem{
   width : 29%;
 }
+
+.profLibraryItem{
+  width : 45.5%;
+}
+.username{
+  width : 100%
+}
+
 
 img{
   margin-top:1em;
