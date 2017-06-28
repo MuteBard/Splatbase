@@ -60,6 +60,15 @@ app.post('/api/memberselect/:id', (req, resp, next) => {
     .catch(next)
 });
 
+app.post('/api/memberwepselect/:id', (req, resp, next) => {
+    let query = req.body.id;
+    console.log(query)
+    db.one(`select * from member where id = $1`, query)
+    .then(data => resp.json(data))
+    .catch(next)
+});
+
+
 app.post('/api/team', (req, resp, next) => {
     let query = req.body.find;
     console.log(query)

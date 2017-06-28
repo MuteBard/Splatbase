@@ -2,6 +2,7 @@ import React from 'react';
 import * as ReactRedux from 'react-redux';
 import * as actions from './Weapons.actions';
 import './Weapons.css'
+import {Link} from 'react-router';
 
 class Weapons extends React.Component{
   componentDidMount(){
@@ -18,8 +19,10 @@ class Weapons extends React.Component{
             <span className="weaponLibrary">
                 {this.props.data.map((obj, idx) =>
                     <span className="weaponLibraryItem">
+                      <Link key={idx} to={"wepusers/:"+obj.id}>
                         <img key={idx} src={`../../images/weapons/${obj.imagelarge}`} height="100px"/>
                         <h1> {obj.name} </h1>
+                      </Link>
                     </span>
                 )}
             </span>
