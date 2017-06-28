@@ -74,7 +74,7 @@ ReactDOM.render(
         <Route path="/members" component={MembersContainer}/>
         <Route path="/teams" component={TeamsContainer}/>
         <Route path="/weapons" component={WeaponsContainer}/>
-        <Route path="/profile" component={ProfileContainer}/>
+        <Route path="/profile/:id" component={ProfileContainer}/>
       </Route>
     </Router>
   </ReactRedux.Provider>,

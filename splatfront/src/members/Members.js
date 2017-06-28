@@ -20,7 +20,7 @@ class Members extends React.Component{
                   {this.props.data.map((obj, idx) =>
                       <div className="memberLibraryItem">
                         <Link key={idx} to={"profile/:"+obj.id}>
-                          <h1 key={idx} onClick={() => this.props.selectMember(obj.id)}> {obj.username} </h1>
+                          <h1 key={idx}> {obj.username} </h1>
                         </Link>
                       </div>
                   )}

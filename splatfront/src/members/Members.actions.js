@@ -19,25 +19,6 @@ export function allMembers() {
   return asyncAction;
 }
 
-export function selectMember(query){
-  let asyncAction = function(dispatch){
-    $.ajax({
-      url: `${BASEURL}/api/memberselect/`,
-      data: JSON.stringify({
-        id : query,
-      }),
-      method: 'post',
-      dataType: 'JSON',
-      contentType: 'application/json'
-    }).then(data => dispatch({
-      type:'memSEL',
-      value: data
-    }))
-  }
-  return asyncAction;
-}
-
-
 export function updateSearch(query){
     let asyncAction = function(dispatch){
         dispatch(updateText(query))

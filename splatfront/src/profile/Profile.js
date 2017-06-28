@@ -5,9 +5,9 @@ import * as actions from './Profile.actions';
 
 class Profile extends React.Component{
   componentDidMount(){
-    this.props.profileContent(this.props.member.person)
+    let id = this.props.params.id
+    this.props.selectMember(id.substring(1))
   }
-
 
   render(){
     return(

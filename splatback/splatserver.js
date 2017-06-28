@@ -52,7 +52,7 @@ app.post('/api/member', (req, resp, next) => {
 });
 
 
-app.post('/api/memberselect', (req, resp, next) => {
+app.post('/api/memberselect/:id', (req, resp, next) => {
     let query = req.body.id;
     console.log(query)
     db.one(`select * from member where id = $1`, query)
