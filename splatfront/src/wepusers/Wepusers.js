@@ -12,7 +12,9 @@ class Wepusers extends React.Component{
   render(){
     console.log("TEST 1")
     return(
-      <div>{this.props.params.id}</div>
+      <div>
+        <h1>{this.props.params.id}</h1>
+      </div>
     )
   }
 }

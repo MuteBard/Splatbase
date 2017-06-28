@@ -20,7 +20,7 @@ export function selectMembersfromWeps(query){
       dataType: 'JSON',
       contentType: 'application/json'
     }).then(data => dispatch({
-      type:'profGET',
+      type:'wepusersGET',
       value: data
     }))
   }

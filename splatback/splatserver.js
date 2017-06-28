@@ -63,7 +63,8 @@ app.post('/api/memberselect/:id', (req, resp, next) => {
 app.post('/api/memberwepselect/:id', (req, resp, next) => {
     let query = req.body.id;
     console.log(query)
-    db.one(`select * from member where id = $1`, query)
+    db.any(`select member.* from memberhasweapon left outer join member	on memberhasweapon.member = member.id where weapon = $1`, query) //aquire an array of member ids that use the particular weapon
+    .then((results) => (console.log(results)))
     .then(data => resp.json(data))
     .catch(next)
 });

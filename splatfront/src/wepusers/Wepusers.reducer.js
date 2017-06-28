@@ -1,5 +1,6 @@
 const INITAL_STATE = {
-  nothing:""
+  nothing:"",
+  people:[]
 };
 
 export default function reducer(state = INITAL_STATE, action){
@@ -9,6 +10,10 @@ export default function reducer(state = INITAL_STATE, action){
     return Object.assign({},state,{
       nothing: "TEST 4"
     })
+  }
+  else if (action.type === "wepusersGET"){
+    console.log("TEST 5")
+    console.log(action.value)
   }
   return state;
 }
