@@ -3,7 +3,7 @@ import BASEURL from '../baseurl'
 
 export function updateText(text){
   return{
-    type: "testing",
+    type: "text",
     value: text
   };
 }

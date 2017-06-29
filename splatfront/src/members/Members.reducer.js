@@ -6,7 +6,6 @@ const INITAL_STATE = {
 
 export default function reducer(state = INITAL_STATE, action){
     if(action.type === "testing"){
-        let tempText = action.value;
         return Object.assign({},state, {
             text:action.value
         })

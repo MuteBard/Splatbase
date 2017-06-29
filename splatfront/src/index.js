@@ -60,7 +60,6 @@ class AppLayout extends React.Component{
               <div className="sidebarItem text members"><IndexLink to="/members" activeClassName="active">Members</IndexLink></div>
               <div className="sidebarItem text Teams"><IndexLink to="/teams" activeClassName="active">Teams</IndexLink></div>
               <div className="sidebarItem text weapons"><IndexLink to="/weapons" activeClassName="active">Weapons</IndexLink></div>
-              <div className="sidebarItem text"><IndexLink to="/wepusers:id" activeClassName="active">Wepusers</IndexLink></div>
             </div>
             {this.props.children}
         </div>

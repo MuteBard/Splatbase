@@ -1,19 +1,21 @@
 const INITAL_STATE = {
-  nothing:"",
+  text:"",
   people:[]
 };
 
 export default function reducer(state = INITAL_STATE, action){
-
-  if(action.type === "testing"){
-    console.log("TEST 3")
-    return Object.assign({},state,{
-      nothing: "TEST 4"
-    })
+  if(action.type === "text"){
+      return Object.assign({},state, {
+          text:action.value
+      })
   }
+
   else if (action.type === "wepusersGET"){
-    console.log("TEST 5")
-    console.log(action.value)
+    let tempPeople = []
+    action.value.map(elem => tempPeople.push(elem))
+    return Object.assign({},state,{
+      people : tempPeople
+    })
   }
   return state;
 }
